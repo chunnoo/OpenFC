@@ -9,6 +9,8 @@ fc.init = function() {
 
 fc.draw = function() {
 
+  this.context.strokeStyle = "#fff";
+
   this.objects.square.setSkew(Math.cos(this.framecount/30) * Math.PI/8, Math.cos(this.framecount/30) * Math.PI/8);
   this.objects.square.update(fc);
   
@@ -27,7 +29,7 @@ fc.draw = function() {
 };
 
 fc.clearFrame = function() {
-  this.context.fillStyle = "rgba(255,255,255,0.25)";
+  this.context.fillStyle = "rgba(0,0,0,0.25)";
   this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
   this.context.fillStyle = "#000";
 };
